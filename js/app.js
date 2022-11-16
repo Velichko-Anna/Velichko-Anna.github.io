@@ -5,7 +5,7 @@ tg.expand();
 tg.MainButton.textColor = '#FFFFFF'
 tg.MainButton.color = '#00E794'
 
-let item = "";
+let item = "0";
 
 let btn1 = document.getElementById("btn1")
 let btn2 = document.getElementById("btn2")
@@ -20,7 +20,7 @@ btn1.addEventListener("click", function(){
     }
     else {
         tg.MainButton.setText("АК-47 | Африканская сетка");
-        item = '1';
+        item = "1";
         tg.MainButton.show();
     }
 });
@@ -82,11 +82,11 @@ btn6.addEventListener("click", function(){
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
     tg.sendData(item);
-})
+});
 
 let usercard = document.getElementById("usercard")
 let p = document.createElement("p")
 
-p.innerText = `${tg.initDataUnsafe.user.first_name}`
+p.innerText = `${tg.initDataUnsafe.first_name}`
 
 usercard.append(p);
